@@ -26,7 +26,7 @@ let toDelete = () => {
 let getMarked = () => {
   markAsDone.forEach((el) => {
     el.addEventListener("click", () => {
-        el.style.backgroundColor = "green";
+        el.parentElement.style.backgroundColor = "green";
     });
   });
 };
