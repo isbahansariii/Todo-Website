@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+*:focus {
+  outline: none;
+}
+.cursor:hover {
+  cursor: pointer;
+}
+.shadow{
+  box-shadow: 2px 2px 2px #2e2e2e;
+  border: none;
+}
+
+.input_markAsDone {
+  background-color: green;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #00001e;
+  background-image: url("./image/bg.png");
+  background-repeat: no-repeat;
+  background-position: 100px 100px;
+  color: #ffffff;
+}
+
+#head {
+  background-color: #000;
+  line-height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: 0px 3px 6px #2e2e2e;
+  font-family: serif;
+}
+
+#deleteAll{
+  width: 90vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#deleteAllBtn{
+  color: white;
+  background-color: #ac0303;
+  border-radius: 5px;
+  width: 5rem;
+  padding: 0 2px;
+  height: 2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#deleteAllBtn:hover{
+  background-color: #ff0000;
+}
+main {
+  width: 100vw;
+  height: auto;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+#container {
+  width: 90%;
+}
+
+.con-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+  gap: 1%;
+}
+#list-input {
+  width: 40%;
+  height: 50%;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(7, 7, 113, 0.5);
+  color: #ffffff;
+}
+#list-input::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+}
+#list-input:focus{
+  border: 1px solid #ffffff;
+}
+#submit {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid #ffffff80;
+  background-color: #07077180;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+#submit:hover{
+  border: 1px solid #ffffff;
+  background-color: #291c83;
+}
+
+#main-list {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#main-list > ul {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.list {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  list-style-type: none;
+  background-color: #291c83;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 5px 20px;
+  gap: 1%;
+}
+
+.list:hover{
+  background-color: #07077180;
+  border: 1px solid #ffffff;
+}
+
+.list-el {
+  width: 85%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.delete,
+.markAsDone {
+  overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  background-color: #07077100;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+}
+.delete:hover,
+.markAsDone:hover {
+  background-color: #291c83;
+}
+
+.foot-btn-add {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#add {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border-radius: calc(45px / 2);
+  position: fixed;
+  bottom: 2vw;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  background: linear-gradient(144deg, #63298d, #291c83 50%, #316264);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  font-size: 2.2em;
+  color: white;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 500;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+#add:hover {
+  width: 125px;
+  transition-duration: 0.3s;
+}
+
+#add:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 15px;
+}
+/* hover effect button's text */
+#add:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 15px;
+}
+/* button click effect*/
+#add:active {
+  transform: translate(2px, 2px);
+}
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 700px) {
+  #container {
+    width: 100%;
+  }
+  #list-input {
+    width: 70%;
+    height: 35%;
+  }
+  .list {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  #container {
+    width: 100%;
+  }
+  #list-input {
+    width: 70%;
+    height: 35%;
+  }
+  .list {
+    width: 90%;
+  }
+}
